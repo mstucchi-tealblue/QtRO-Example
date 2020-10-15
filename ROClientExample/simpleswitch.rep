@@ -1,5 +1,7 @@
+#include<QRect>
 class SimpleSwitch
 {
     PROP(bool currState=false);
+    PROP(QRect geometry)
     SLOT(server_slot(bool clientState));
 };

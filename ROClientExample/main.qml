@@ -2,8 +2,11 @@ import QtQuick 2.15
 import QtQuick.Window 2.15
 
 Window {
-    width: 640
-    height: 480
+    width: client.internalProcessWindowWidth
+    height: client.internalProcessWindowHeight
+    x: client.internalProcessWindowX
+    y: client.internalProcessWindowY
+    color:"blue"
     visible: true
     title: qsTr("Hello World")
 }

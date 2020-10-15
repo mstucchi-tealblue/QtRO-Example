@@ -30,13 +30,9 @@ void Client::initConnections()
 
 void Client::recSwitchState_slot()
 {
-    qDebug() << "Received source state "<<reptr.data()->currState();
     clientSwitchState = reptr.data()->currState();
 
-    setInternalProcessWindowHeight(getInternalProcessWindow().height());
-    setInternalProcessWindowWidth(getInternalProcessWindow().width());
-    setInternalProcessWindowX(getInternalProcessWindow().x());
-    setInternalProcessWindowY(getInternalProcessWindow().y());
+    qDebug() << "Received source state "<<reptr.data()->currState();
 
     Q_EMIT echoSwitchState(clientSwitchState); // Emit signal to echo received state back to server
 }
@@ -45,6 +41,10 @@ void Client::setLocalGeometry_slot(QRect windowGeometry)
 {
     qDebug() << "Geometria arrivata";
     setInternalProcessWindow(windowGeometry);
+    setInternalProcessWindowHeight(getInternalProcessWindow().height());
+    setInternalProcessWindowWidth(getInternalProcessWindow().width());
+    setInternalProcessWindowX(getInternalProcessWindow().x());
+    setInternalProcessWindowY(getInternalProcessWindow().y());
 
 }
 

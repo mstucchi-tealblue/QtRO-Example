@@ -3,7 +3,6 @@
 #include <QCoreApplication>
 #include <QQuickWindow>
 #include <QQmlContext>
-#include "dynamicclient.h"
 #include "client.h"
 
 int main(int argc, char *argv[])
@@ -46,6 +45,7 @@ int main(int argc, char *argv[])
 
     auto topLevelObject = engine.rootObjects().value(0);
     auto window = qobject_cast<QQuickWindow *>(topLevelObject);
+    //window->setFlags(Qt::WindowStaysOnTopHint);
     window->setGeometry(rswitch.getInternalProcessWindow());
     window->show();
 

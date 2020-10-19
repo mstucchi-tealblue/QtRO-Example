@@ -9,7 +9,6 @@ CONFIG += c++11
 
 SOURCES += \
         client.cpp \
-        dynamicclient.cpp \
         main.cpp
 
 RESOURCES += qml.qrc
@@ -28,5 +27,4 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 HEADERS += \
-    client.h \
-    dynamicclient.h
+    client.h

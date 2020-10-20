@@ -4,7 +4,7 @@
 Client::Client(QSharedPointer<SimpleSwitchReplica> ptr) :
     QObject(nullptr),reptr(ptr)
 {
-    initConnections();
+    initConnections();    
 }
 
 //destructor
@@ -84,3 +84,4 @@ void Client::setInternalProcessWindow(const QRect &value)
 {
     internalProcessWindow = value;
 }
+

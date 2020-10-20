@@ -19,7 +19,6 @@ public:
     ~Client();
     void initConnections();// Function to connect signals and slots of source and client
 
-    //Mine
     QRect getInternalProcessWindow() const;
     void setInternalProcessWindow(const QRect &value);
     int getInternalProcessWindowHeight() const;
@@ -32,20 +31,17 @@ public:
     void setInternalProcessWindowY(int value);
 
 Q_SIGNALS:
-
     void internalProcessWindowHeightChanged();
     void internalProcessWindowWidthChanged();
     void internalProcessWindowXChanged();
     void internalProcessWindowYChanged();
 
 public Q_SLOTS:
-    //Mine
     void setLocalGeometry_slot(QRect windowGeometry); // slot to receive window size
 private:
     QSharedPointer<SimpleSwitchReplica> reptr;// holds reference to replica
 
-    //Mine
-    QRect internalProcessWindow = QRect(50,50,300,300); //holds received server window size
+    QRect internalProcessWindow = QRect(600,400,640,480); //holds received server window size
     int internalProcessWindowHeight;
     int internalProcessWindowWidth;
     int internalProcessWindowX;
@@ -54,3 +50,5 @@ private:
  };
 
 #endif
+
+

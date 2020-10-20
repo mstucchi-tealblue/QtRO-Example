@@ -43,10 +43,5 @@ int main(int argc, char *argv[])
         srcSwitch.setGeometry(window->geometry());
         });
 
-
-
-
-
-
     return app.exec();
 }

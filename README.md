@@ -1,6 +1,9 @@
-# Two windows that share the positions and size
+# Two windows that share the position and size. 
 
-How to:
+I did not take care about closing event, always above, visibility. 
+This is just the mechanism for positioning and resizing.
+
+How to use:
 1) Start server process
 2) Start client process
 3) Make the windows visible in your screen
